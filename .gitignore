@@ -42,4 +42,4 @@ testem.log
 Thumbs.db
 
 #Firebase
-/src/app/api-keys.ts
+/src/api-keys.ts

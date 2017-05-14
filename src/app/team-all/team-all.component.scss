@@ -1,0 +1,57 @@
+$font-size: 15px;
+$line-height: 1.5;
+$lines-to-show: 3;
+
+.card-content p {
+  display: block;
+  display: -webkit-box;
+  max-height: $font-size*$line-height*$lines-to-show;
+  margin: 0 auto;
+  font-size: $font-size;
+  line-height: $line-height;
+  -webkit-line-clamp: $lines-to-show;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+$title-font-size: 24px;
+$title-line-height: 1.333;
+$title-lines: 2;
+
+.card-title {
+  display: block;
+  display: -webkit-box;
+  max-height: $title-font-size*$title-line-height*$title-lines;
+  margin: 0 auto;
+  font-size: $title-font-size;
+  line-height: $title-line-height;
+  -webkit-line-clamp: $title-lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list-container {
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.list-cards {
+  flex: 0 1 auto;
+  margin: 10px;
+  max-width: 320px;
+
+
+  .card-image {
+    position: relative;
+    overflow: hidden;
+    height: 213px;
+    width: auto;
+  }
+}

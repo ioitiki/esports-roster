@@ -12,6 +12,7 @@ import { TeamNewComponent } from './team-new/team-new.component';
 import { TeamService } from './team.service';
 import { AboutComponent } from './about/about.component';
 import { routing } from './app.routing';
+import { TeamAllComponent } from './team-all/team-all.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -24,7 +25,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     AboutComponent,
-    TeamNewComponent
+    TeamNewComponent,
+    TeamAllComponent
   ],
   imports: [
     BrowserModule,

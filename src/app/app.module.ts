@@ -13,6 +13,7 @@ import { TeamService } from './team.service';
 import { AboutComponent } from './about/about.component';
 import { routing } from './app.routing';
 import { TeamAllComponent } from './team-all/team-all.component';
+import { GameFilterPipe } from './game-filter.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -26,7 +27,8 @@ export const firebaseConfig = {
     AppComponent,
     AboutComponent,
     TeamNewComponent,
-    TeamAllComponent
+    TeamAllComponent,
+    GameFilterPipe
   ],
   imports: [
     BrowserModule,

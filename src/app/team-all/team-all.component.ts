@@ -11,6 +11,8 @@ import { Router } from "@angular/router";
 })
 export class TeamAllComponent implements OnInit {
   teams: Team[];
+  selectedGame: string = "all";
+  games: string[];
 
   constructor(private teamService: TeamService, private router: Router) { }
 
@@ -18,6 +20,7 @@ export class TeamAllComponent implements OnInit {
     this.teamService.getTeams().subscribe((teams) => {
       this.teams = teams;
     });
+    this.games = this.teamService.getGames();
   }
 
 }

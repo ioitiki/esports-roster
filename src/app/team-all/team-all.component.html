@@ -1,11 +1,20 @@
+<div class="row">
+  <div class="input-field col s6 offset-s3 game-select">
+    <select materialize="material_select" [materializeSelectOptions]="games" [(ngModel)]="selectedGame">
+      <option value="all">All</option>
+      <option *ngFor="let option of games" [value]="option">{{option}}</option>
+    </select>
+  </div>
+</div>
+
 <div class="list-container">
 
-  <div *ngFor="let team of teams" class="card large z-depth-2 list-cards">
+  <div *ngFor="let team of teams | gameFilter:selectedGame" class="card large z-depth-2 list-cards">
     <div class="card-image">
       <img (click)="goToDetails(team)" src="{{team?.image_src}}">
     </div>
     <div class="card-content">
-      <a class="activator btn-floating right waves-effect waves-light red"><i class="material-icons">attach_money</i></a>
+      <a class="activator btn-floating right waves-effect waves-light red"><i class="material-icons">menu</i></a>
       <span>{{team?.name}}</span>
       <h6>{{team?.gmae}}</h6>
       <p>{{team?.description}}</p>

@@ -14,7 +14,7 @@
       <img (click)="goToDetails(team)" src="{{team?.image_src}}">
     </div>
     <div class="card-content">
-      <a class="activator btn-floating right waves-effect waves-light red"><i class="material-icons">menu</i></a>
+      <a (click)="goToDetails(team)" class="activator btn-floating right waves-effect waves-light red"><i class="material-icons">menu</i></a>
       <span>{{team?.name}}</span>
       <h6>{{team?.gmae}}</h6>
       <p>{{team?.description}}</p>

@@ -9,6 +9,7 @@ import { Router } from "@angular/router";
   templateUrl: './team-all.component.html',
   styleUrls: ['./team-all.component.css', './team-all.component.scss']
 })
+
 export class TeamAllComponent implements OnInit {
   teams: Team[];
   selectedGame: string = "all";
@@ -23,4 +24,7 @@ export class TeamAllComponent implements OnInit {
     this.games = this.teamService.getGames();
   }
 
+  goToDetails(team: any) {
+    this.router.navigate(['teams', team.$key])
+  }
 }

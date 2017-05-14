@@ -24,4 +24,8 @@ export class TeamService {
     this.teams.push(team);
   }
 
+  getTeamById(teamId: string) {
+    return this.database.object('teams/' + teamId);
+  }
+
 }

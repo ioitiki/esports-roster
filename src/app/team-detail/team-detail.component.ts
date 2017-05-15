@@ -32,4 +32,8 @@ export class TeamDetailComponent implements OnInit {
     })
   }
 
+  goToEdit() {
+    this.router.navigate(['teams', this.teamId, 'edit']);
+  }
+
 }

@@ -28,4 +28,12 @@ export class TeamService {
     return this.database.object('teams/' + teamId);
   }
 
+  updateTeam(teamId: string, teamToUpdate) {
+    this.teams.update(teamId, teamToUpdate);
+  }
+
+  deleteTeam(teamId: string) {
+    this.teams.remove(teamId);
+  }
+
 }

@@ -14,6 +14,7 @@ import { TeamService } from '../team.service';
 export class TeamDetailComponent implements OnInit {
   teamId: string;
   team: Team;
+  players: any[];
 
 
   constructor(

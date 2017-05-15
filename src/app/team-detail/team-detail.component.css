@@ -1,0 +1,22 @@
+.list-container {
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.list-cards {
+  flex: 0 1 auto;
+  margin: 10px;
+  max-width: 320px;
+}
+
+.card-image {
+  position: relative;
+  overflow: hidden;
+  height: 240px;
+  width: auto;
+}

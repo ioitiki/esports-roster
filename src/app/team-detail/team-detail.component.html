@@ -1,4 +1,39 @@
-<p>
-  team-detail works!
-</p>
-<a (click)="goToEdit()" class="btn waves-effect waves-light blue-grey darken-1">Edit Team</a>
+<div class="container">
+  <div class="row">
+    <div class="col 12">
+      <h2>{{player?.name}}</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s8">
+      <img class="responsive-img" src="{{team?.image_src}}" /><br>
+      <div class="chip">
+        <img *ngIf="team" src="assets/images/{{team?.game}}.png" alt="Game">
+        {{team?.game}}
+      </div>
+    </div>
+    <div class="col s4">
+      <blockquote>
+        <p class="flow-text">{{team?.description}}</p>
+      </blockquote>
+    </div>
+    <a (click)="goToEdit()" class="btn waves-effect waves-light blue-grey darken-1 right">Edit Team</a>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="list-container">
+      <div *ngFor="let player of team?.players" class="card large z-depth-2 list-cards">
+        <div class="card-image">
+          <img src="{{player?.image_src}}">
+        </div>
+        <div class="card-content">
+          <span>{{player?.name}}</span>
+          <em><h6>Age: {{player?.age}}</h6></em><br>
+          <p>{{player?.description}}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

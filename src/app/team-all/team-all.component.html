@@ -8,15 +8,14 @@
 </div>
 
 <div class="list-container">
-
-  <div *ngFor="let team of teams | gameFilter:selectedGame" class="card large z-depth-2 list-cards">
+  <div *ngFor="let team of teams | gameFilter:selectedGame" class="card z-depth-2 list-cards">
     <div class="card-image">
       <img (click)="goToDetails(team)" src="{{team?.image_src}}">
     </div>
     <div class="card-content">
-      <a (click)="goToDetails(team)" class="activator btn-floating right waves-effect waves-light red"><i class="material-icons">menu</i></a>
+      <a (click)="goToDetails(team)" class="btn-floating right waves-effect waves-light red"><i class="material-icons">menu</i></a>
       <span>{{team?.name}}</span>
-      <h6>{{team?.gmae}}</h6>
+      <em><h6>{{team?.game}}</h6></em><br>
       <p>{{team?.description}}</p>
     </div>
   </div>
